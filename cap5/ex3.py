@@ -1,0 +1,11 @@
+import pandas as pd
+
+seriesAno1 = pd.Series({'Java': 16.25,'C': 16.04, 'Python': 9.85})
+seriesAno2 = pd.Series({'C': 16.21,'Python': 12.12, 'Java': 11.68})
+
+variacao = ((seriesAno2 - seriesAno1) / seriesAno1) * 100
+
+for linguagem, valor in variacao.items():
+    print(f"Variação da linguagem {linguagem} foi {valor:.2f}%")
+    
+    
